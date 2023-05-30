@@ -16,7 +16,7 @@ Register user
     Fill Text    css=input[name=email]    ${user}[email]
     Fill Text    css=input[name=password]    ${user}[password]
 
-    Click    css=button[type=submit] >> text=Cadastrar
+    Tenta realizar o cadastro    
 
 Notice should be
     [Arguments]    ${message}
@@ -25,6 +25,9 @@ Notice should be
 
     Wait For Elements State    ${notice}    visible    5
     Get Text    ${notice}    equal    ${message}
+
+Tenta realizar o cadastro
+    Click    css=button[type=submit] >> text=Cadastrar
 
 Texto deve ser exibido na pagina
     [Arguments]    ${message}    ${timeout}=5    

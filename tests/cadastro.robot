@@ -16,7 +16,6 @@ Deve cadastrar um novo usuario
     Register user    ${user}    
     Notice should be    Boas vindas ao Mark85, o seu gerenciador de tarefas.
 
-
 Usuario duplicado
     [Tags]    dup
 
@@ -38,20 +37,20 @@ Nome deve ser obrigatorio
     [Tags]    campos-obrigatorios
     Start Session
     Go to signup
-    Click    css=button[type=submit] >> text=Cadastrar
+    Tenta realizar o cadastro    
     Texto deve ser exibido na pagina    Informe seu nome completo  
 
 Email deve ser obrigatorio
     [Tags]    campos-obrigatorios
     Start Session
     Go to signup
-    Click    css=button[type=submit] >> text=Cadastrar
+    Tenta realizar o cadastro
     Texto deve ser exibido na pagina    Informe seu e-email
 
 Senha deve ser obrigatoria
     [Tags]    campos-obrigatorios
     Start Session
     Go to signup
-    Click    css=button[type=submit] >> text=Cadastrar
+    Tenta realizar o cadastro
     Texto deve ser exibido na pagina    Informe uma senha com pelo menos 6 digitos
 
