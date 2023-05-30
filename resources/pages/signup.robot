@@ -26,3 +26,6 @@ Notice should be
     Wait For Elements State    ${notice}    visible    5
     Get Text    ${notice}    equal    ${message}
 
+Texto deve ser exibido na pagina
+    [Arguments]    ${message}    ${timeout}=5    
+    Wait For Elements State    text=${message}    visible    ${timeout}    

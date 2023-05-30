@@ -30,13 +30,28 @@ Usuario duplicado
     Start Session
     Go to signup
 
-
     Register user    ${user}    
     Register user    ${user}    
     Notice should be    Oops! Já existe um cadastro com e-mail informado.
 
-
-
 Nome deve ser obrigatorio
+    [Tags]    campos-obrigatorios
+    Start Session
+    Go to signup
+    Click    css=button[type=submit] >> text=Cadastrar
+    Texto deve ser exibido na pagina    Informe seu nome completo  
+
 Email deve ser obrigatorio
+    [Tags]    campos-obrigatorios
+    Start Session
+    Go to signup
+    Click    css=button[type=submit] >> text=Cadastrar
+    Texto deve ser exibido na pagina    Informe seu e-email
+
 Senha deve ser obrigatoria
+    [Tags]    campos-obrigatorios
+    Start Session
+    Go to signup
+    Click    css=button[type=submit] >> text=Cadastrar
+    Texto deve ser exibido na pagina    Informe uma senha com pelo menos 6 digitos
+
